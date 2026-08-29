@@ -75,8 +75,9 @@ LOCALES: dict[str, dict] = {
                 "Google'ın veri uygulamaları için: "
                 "https://policies.google.com/technologies/partner-sites",
                 "Firebase Crashlytics çökme tanılaması için kullanılır. "
-                "Firebase Analytics varsayılan olarak açıktır ve Ayarlar'dan "
-                "kapatılabilir. Firebase Remote Config, isteğe bağlı Diğer "
+                "Firebase Analytics veri toplaması production sürümlerinde "
+                "açıktır; debug ve profile sürümlerinde kapalıdır. Firebase "
+                "Remote Config, isteğe bağlı Diğer "
                 "Oyunlar kataloğunu alırken bir kurulum kimliği kullanabilir.",
             ]),
             ("Satın almalar", [
@@ -96,7 +97,7 @@ LOCALES: dict[str, dict] = {
             ]),
             ("Haklarınız", [
                 "Yerel oyun verisini uygulama verilerini temizleyerek yönetebilir; "
-                "analiz tercihini Ayarlar'dan ve reklam tercihlerini sunulan "
+                "reklam tercihlerini sunulan "
                 "gizlilik seçeneklerinden değiştirebilirsiniz.",
                 "Yine de sorularınız için bize yazabilirsiniz.",
             ]),
@@ -202,7 +203,8 @@ LOCALES: dict[str, dict] = {
                 "Google's data practices: "
                 "https://policies.google.com/technologies/partner-sites",
                 "Firebase Crashlytics is used for crash diagnostics. Firebase "
-                "Analytics is on by default and can be turned off in Settings. "
+                "Analytics collection is enabled in production releases and "
+                "disabled in debug and profile builds. "
                 "Firebase Remote Config may use an installation identifier "
                 "while retrieving the optional More Games catalog.",
             ]),
@@ -221,8 +223,8 @@ LOCALES: dict[str, dict] = {
                 "please contact us and we will act on it.",
             ]),
             ("Your rights", [
-                "You can manage local game data by clearing app data, change "
-                "Analytics in Settings, and use the available privacy choices "
+                "You can manage local game data by clearing app data and use "
+                "the available privacy choices "
                 "to manage advertising consent.",
                 "You are still welcome to contact us with any question.",
             ]),
@@ -330,9 +332,10 @@ LOCALES: dict[str, dict] = {
                 "den Datenschutz- oder Geräteeinstellungen verwalten.",
                 "Datenpraktiken von Google: "
                 "https://policies.google.com/technologies/partner-sites",
-                "Firebase Crashlytics dient der Fehlerdiagnose. Firebase "
-                "Analytics ist standardmäßig aktiviert und kann in den "
-                "Einstellungen deaktiviert werden. Remote Config kann für den "
+                "Firebase Crashlytics dient der Fehlerdiagnose. Die Datenerfassung "
+                "durch Firebase Analytics ist in Produktionsversionen aktiviert "
+                "und in Debug- und Profilversionen deaktiviert. Remote Config "
+                "kann für den "
                 "optionalen Spielekatalog "
                 "eine Firebase-Installations-ID verwenden.",
             ]),
@@ -351,7 +354,7 @@ LOCALES: dict[str, dict] = {
                 "wurden, wenden Sie sich bitte an uns.",
             ]),
             ("Ihre Rechte", [
-                "Lokale Spieldaten, Analytics und Werbeeinwilligung können über "
+                "Lokale Spieldaten und Werbeeinwilligung können über "
                 "App-, Geräte- und Datenschutzeinstellungen verwaltet werden.",
                 "Für Fragen können Sie uns dennoch jederzeit schreiben.",
             ]),
@@ -464,8 +467,9 @@ LOCALES: dict[str, dict] = {
                 "de la aplicación o los ajustes del dispositivo.",
                 "Prácticas de datos de Google: "
                 "https://policies.google.com/technologies/partner-sites",
-                "Firebase Crashlytics se usa para diagnosticar fallos. Firebase "
-                "Analytics está activado por defecto y puede desactivarse en Ajustes. "
+                "Firebase Crashlytics se usa para diagnosticar fallos. La "
+                "recopilación de Firebase Analytics está activada en las versiones "
+                "de producción y desactivada en las compilaciones debug y profile. "
                 "Remote Config puede usar un identificador de instalación al "
                 "obtener el catálogo opcional de Otros juegos.",
             ]),
@@ -485,7 +489,7 @@ LOCALES: dict[str, dict] = {
                 "escríbenos y actuaremos en consecuencia.",
             ]),
             ("Tus derechos", [
-                "Puedes gestionar los datos locales, Analytics y el consentimiento "
+                "Puedes gestionar los datos locales y el consentimiento "
                 "publicitario mediante los ajustes de la aplicación, privacidad "
                 "y dispositivo.",
                 "Aun así, puedes escribirnos con cualquier duda.",
@@ -599,8 +603,9 @@ LOCALES: dict[str, dict] = {
                 "options de confidentialité de l'App ou de l'appareil.",
                 "Pratiques de Google en matière de données : "
                 "https://policies.google.com/technologies/partner-sites",
-                "Firebase Crashlytics sert au diagnostic des pannes. Firebase "
-                "Analytics est activé par défaut et peut être désactivé dans Réglages. "
+                "Firebase Crashlytics sert au diagnostic des pannes. La collecte "
+                "Firebase Analytics est activée dans les versions de production et "
+                "désactivée dans les versions debug et profile. "
                 "Remote Config peut utiliser un identifiant d'installation pour "
                 "le catalogue facultatif Autres jeux.",
             ]),
@@ -619,7 +624,7 @@ LOCALES: dict[str, dict] = {
                 "été traitées, contactez-nous et nous agirons.",
             ]),
             ("Vos droits", [
-                "Vous pouvez gérer les données locales, Analytics et le consentement "
+                "Vous pouvez gérer les données locales et le consentement "
                 "publicitaire dans les réglages de l'application, de confidentialité "
                 "et de l'appareil.",
                 "Vous pouvez malgré tout nous écrire pour toute question.",
@@ -726,8 +731,9 @@ LOCALES: dict[str, dict] = {
                 "الخصوصية في التطبيق أو من إعدادات الجهاز.",
                 "ممارسات Google بشأن البيانات: "
                 "https://policies.google.com/technologies/partner-sites",
-                "يُستخدم Firebase Crashlytics لتشخيص الأعطال. ويكون Firebase "
-                "Analytics مفعّلًا افتراضيًا ويمكن إيقافه من الإعدادات. وقد "
+                "يُستخدم Firebase Crashlytics لتشخيص الأعطال. ويكون جمع Firebase "
+                "Analytics مفعّلًا في إصدارات الإنتاج ومعطّلًا في إصدارات debug "
+                "وprofile. وقد "
                 "يستخدم Remote Config معرّف تثبيت لجلب كتالوج الألعاب الاختياري.",
             ]),
             ("عمليات الشراء", [
@@ -745,7 +751,7 @@ LOCALES: dict[str, dict] = {
                 "وسنتصرف بشأنها.",
             ]),
             ("حقوقك", [
-                "يمكنك إدارة البيانات المحلية والتحليلات وموافقة الإعلانات من "
+                "يمكنك إدارة البيانات المحلية وموافقة الإعلانات من "
                 "إعدادات التطبيق والخصوصية والجهاز.",
                 "ومع ذلك يمكنك مراسلتنا بأي سؤال.",
             ]),
