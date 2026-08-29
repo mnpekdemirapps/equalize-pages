@@ -21,7 +21,7 @@ APP = "Equalize"
 EMAIL = "mnpekdemir.apps@gmail.com"
 PACKAGE = "com.mnpekdemir.equalize"
 EFFECTIVE = "2026-08-29"
-BASE = "https://mnpekdemirapps.github.io/equalizer-pages"
+BASE = "https://mnpekdemirapps.github.io/equalize-pages"
 
 # ── Diller ────────────────────────────────────────────────────────────────
 # Sıra sayfadaki dil seçicinin sırasıdır.
