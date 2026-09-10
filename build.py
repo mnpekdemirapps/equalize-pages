@@ -1,15 +1,20 @@
 #!/usr/bin/env python3
-"""Equalize yasal sayfalarını üretir.
+"""Retired independent legal-page generator; use the app's Dart exporter.
 
-Tek bir veri tablosundan bütün dillerin `privacy.html` / `terms.html`
-dosyalarını yazar. Metni tek yerde tuttuğu için bir maddeyi düzeltmek altı
-dosyayı elle güncellemek anlamına gelmiyor; yeni dil eklemek de yalnızca
-LOCALES sözlüğüne bir girdi eklemek.
-
-Kullanım:  python3 build.py
+This old table diverged from the canonical in-app privacy documents. Running
+it would restore obsolete ATT statements and overwrite app-ads.txt. See README
+for the staging-only workflow that preserves the approved advertising file.
 """
 
 from __future__ import annotations
+
+if __name__ == "__main__":
+    raise SystemExit(
+        "This legacy generator is disabled. From the Equalize app repository, "
+        "run: dart run tool/build_pages.dart <separate-staging-directory>. "
+        "Review and copy only the intended privacy HTML files. "
+        "Do not copy app-ads.txt. See README.md."
+    )
 
 import html
 import os
